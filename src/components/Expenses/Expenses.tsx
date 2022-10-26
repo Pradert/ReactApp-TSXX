@@ -16,16 +16,14 @@ function Expenses(props: any) {
     <div>
       <ExpensesFilter selected={filteredYear} selectYear={selectedYear} />
       <Card>
-        {props.data.map((item: any) => {
-          return (
-            <ExpenseItem
-              key={item.id}
-              title={item.title}
-              amount={item.amount}
-              date={item.date}
-            />
-          );
-        })}
+        {props.data.map((item: any) =>
+          <ExpenseItem
+            key={item.id}
+            title={item.title}
+            amount={item.amount}
+            date={item.date}
+          />
+        )}
       </Card>
     </div>
   );
